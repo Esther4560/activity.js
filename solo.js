@@ -23,6 +23,7 @@ ASSIGNMENT RULES
 Create a variable called test and assign a string value to it.
 
 */
+console.log("\n------- G Answer-----\n")
 let test ="this is a test!";
 console.log(test);
 /* EXERCISE B
@@ -30,6 +31,7 @@ console.log(test);
 Create a variable called sum and assign to it the result of the sum between the numbers 10 and 20.
 
 */
+console.log("\n----B Answer------\n")
 let num1 = '10';
 let num2 = '20';
 
@@ -42,6 +44,7 @@ console.log(sum)
 Create a variable called random and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 
 */
+console.log("\n-------C Answer------\n")
 let random=(min, max) =>  {
     return Math.floor(Math.random() * (max - min) + min);
       };
@@ -51,6 +54,7 @@ let random=(min, max) =>  {
 Create a variable called me and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 
 */
+console.log("\n----- D Answer----\n")
 let me={
     name:"Esther",
     surname:"Nomeh",
@@ -62,7 +66,8 @@ console.log(me);
 Write a piece of code for programmatically removing the age property from the previously create object.
 
 */
-let Me= {
+console.log("\n------E Answer-----\n")
+     me= {
     name:"Esther",
     surname:"Nomeh",
     age:"25"
@@ -74,18 +79,21 @@ console.log(me);
 Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.
 
 */
-    me={
-    name:"Esther",
-    surname:"Nomeh",
-    age:"25",
-}
-let skills=("javascrpt,c++,python");
-console.log(me);
+console.log("\n-------F Answer----------\n")
+me.skills = [`python`, `CSS`, `JavaScript`]
+
+console.log(me)
 /* EXERCISE G
 
 Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 
 */
+
+console.log("\n-----Exercise G -----\n")
+
+me.skills.pop();
+
+console.log(me)
 
 // JS Functions
 
@@ -95,12 +103,27 @@ Write a function called dice; it should randomize an integer number between 1 an
 
 */
 
+console.log("\n.....answer 1...\n")
+
+const dice= Math.floor(Math.random()*(6-1))+1;
+console.log(dice)
 /* EXERCISE 2
 
 Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 
 */
 
+console.log("\n.....answer 2...\n")
+function whoIsBigger(a, b){
+    if (a>b){
+      return a;
+    }else if (a==b){
+      return a;
+    }else{
+      return b;
+    };
+  };
+  console.log(whoIsBigger(2,3))
 /* EXERCISE 3
 
 Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
@@ -108,7 +131,17 @@ Write a function called splitMe which receives a string as a parameter and retur
 Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 
 */
+console.log("\n.....answer 3...\n")
 
+function splitMe(string) {
+   
+    return string.split(" ")
+
+}
+
+splitMe("i love Epicode")
+
+console.log(splitMe("i love Epicode"))
 /* EXERCISE 4
 
 Write a function called deleteOne which receives a string and a boolean as parameters.
@@ -116,7 +149,22 @@ Write a function called deleteOne which receives a string and a boolean as param
 If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 
 */
+console.log("\n.....answer 4...\n")
+function deleteOne(string,boolean) {
+   let stringLength = string.length
+    if (boolean === true) {
+        return string.slice(1,stringLength)
+    } 
+    else
+    {
+        return string.slice(0,stringLength-1)
+    }
 
+}
+
+deleteOne("it is a string",true)
+
+console.log(deleteOne("it is a string",true))
 /* EXERCISE 5
 
 Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
@@ -124,20 +172,48 @@ Write a function called onlyLetters which receives a string as a parameter and r
 Ex.: onlyLetters("I have 4 dogs") => returns "I have dogs"
 
 */
-
+console.log("\n.....answer 5...\n")
+function onlyLetters(string) {
+    let replaced = string.replace(/[0-9]/g, ' ')
+ 
+    return replaced
+ 
+ }
+ 
+ console.log(onlyLetters("grapes are the best"))
 /* EXERCISE 6
 
 Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 
 */
+console.log("\n.....answer 6...\n")
+function isThisAnEmail(str) {
 
+    let thisEmail = "onions@gmail.com"
+
+   if (thisEmail === str) {
+    
+   }
+   return true
+
+}
+
+
+console.log(isThisAnEmail("onions@gmail.com"))
 /* EXERCISE 7
 
 Write a function called whatDayIsIt that should return the current day of the week.
 
-*/
+*/ 
+console.log("\n.....answer 7...\n")
 
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+const whatDayIsIt = new Date();
+let day = weekday[whatDayIsIt .getDay()];
+console.log(whatDayIsIt)
 /* EXERCISE 8
+
 
 Write a function called rollTheDices which receives a number as a parameter.
 
@@ -156,7 +232,7 @@ values: [3, 3, 4]
 }
 
 */
-
+console.log("\n.....answer 8...\n")
 /* EXERCISE 9
 
 Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
