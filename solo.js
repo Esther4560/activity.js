@@ -238,6 +238,7 @@ console.log("\n.....answer 8...\n")
 Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 
 */
+console.log("\n.....answer 9...\n")
 
 /* EXERCISE 10
 
