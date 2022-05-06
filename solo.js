@@ -23,7 +23,7 @@ ASSIGNMENT RULES
 Create a variable called test and assign a string value to it.
 
 */
-console.log("\n------- G Answer-----\n")
+console.log("\n------- A Answer-----\n")
 let test ="this is a test!";
 console.log(test);
 /* EXERCISE B
